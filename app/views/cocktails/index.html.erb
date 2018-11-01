@@ -1,0 +1,9 @@
+<div class="col-xs-6 col-xs-offset-3">
+  <h1>List of all cocktails</h1>
+  <% @cocktails.each do |c| %>
+    <ul>
+      <li><%= link_to c.name, cocktail_path(c) %></li>
+    </ul>
+  <% end %>
+  <%= link_to 'New Cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+</div>
