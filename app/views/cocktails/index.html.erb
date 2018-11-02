@@ -1,9 +1,18 @@
-<div class="col-xs-6 col-xs-offset-3">
-  <h1>List of all cocktails</h1>
-  <% @cocktails.each do |c| %>
-    <ul>
-      <li><%= link_to c.name, cocktail_path(c) %></li>
-    </ul>
-  <% end %>
-  <%= link_to 'New Cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+<!-- banner -->
+<% render "shared/banner" %>
+
+<h1>List of all cocktails</h1>
+<% @cocktails.each do |c| %>
+<div class="col-md-3 col-xs-12">
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://www.mrbeer.com/media/catalog/product/Beer-Amber-MugLOW.jpg');">
+    <div class="card-description">
+      <ul>
+        <%= link_to c.name, cocktail_path(c) %>
+      </ul>
+    </div>
+    <a class="card-link" href="#" ></a>
+  </div>
 </div>
+<% end %>
+</div
+
